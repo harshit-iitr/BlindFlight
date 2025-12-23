@@ -1,0 +1,14 @@
+# Ignore the input data folder (wherever it is)
+input/
+
+# Ignore python cache files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ignore zip files
+*.zip
+
+# Ignore system junk
+Thumbs.db
+.DS_Store
