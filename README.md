@@ -12,7 +12,11 @@ We achieved **81% accuracy** not by relying on a single model, but by engineerin
 ### 1. The Backup: Ungridded Global Model
 * **Role:** High Recall / Safety Net.
 * **Function:** A lightweight model that looks at the map globally without slicing.
-* **Why it matters:** Grid slicing techniques sometimes fail on blurry or highly corrupted maps, resulting in broken paths. This model ensures that **most of the maps have a predicted path, though compromising accuracy**, preventing invalid submissions.
+* **Why it matters:** Grid slicing techniques sometimes fail on blurry or highly corrupted maps, resulting in broken paths. This model ensures that **most of the maps have a predicted path, though sometimes inaccurate**, preventing invalid submissions.
+
+![Ungridded Model Output](Sample%20outputs/ResNet-34%20UnGridded.png)
+
+*(Fig 1: The Ungridded model generating a global heuristic path even on noisy inputs)*
 
 ### 2. The Expert: Gridded ResNet-18
 * **Role:** High Precision / Fine-Grained Classification.
@@ -20,6 +24,9 @@ We achieved **81% accuracy** not by relying on a single model, but by engineerin
 * **Key Innovations:**
     * **"Diamond Cutter" Augmentation:** We trained on images with randomly "cut" corners to force the model to recognize objects by internal texture rather than shape.
     * **Velocity-Aware A:** The pathfinding algorithm integrates the hidden **Velocity Boost Field** ($Cost = Base - Boost$), allowing drones to ride the wind for optimal energy efficiency.
+
+![Gridded Model Output](Sample%20outputs/ResNet-18%20Gridded.png)
+*(Fig 2: The Gridded ResNet-18 successfully segmenting the map tiles for precise A* navigation)*
 
 ### 🤝 The Merger
 The final submission combines these two models. The Gridded model provides precise, optimal paths for the majority of maps. Wherever the Gridded model is uncertain or fails to find a valid route, the **Ungridded model fills the gap**, raising the overall system accuracy to **81.82%**.
