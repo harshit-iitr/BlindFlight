@@ -43,3 +43,27 @@ BlindFlight-Solution/
 ├── SubmissionScript/        # The core inference logic (submission_generator.py)
 ├── .gitignore               
 └── README.md                # Project documentation
+
+```
+## 🚀 How to Run
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/harshit-iitr/BlindFlight-Solution.git](https://github.com/harshit-iitr/BlindFlight-Solution.git)
+cd BlindFlight-Solution
+```
+### 2. Run this command in your terminal to install everything at once:
+```
+pip install -r requirements.txt
+```
+### 3. Data Setup (Crucial)
+
+The script requires the Synapse Drive Test Dataset to run as the test dataset size was too big to commit in git.
+Manual Configuration: If your data is stored in a custom location, open SubmissionScript/generator.py.py and manually update the possible_paths list or the TEST_IMG_DIR variable to point to your test/images folder.
+
+### 4. Generate Submission
+
+Navigate to the script folder and execute the generator.
+```
+cd SubmissionScript
+python generator.py.py
