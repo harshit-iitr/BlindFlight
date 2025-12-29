@@ -1,4 +1,4 @@
-# Blind Flight: Autonomous Logistics Rescue
+# Blind Flight
 ### Synapse Drive 2024 Solution
 
 **Author:** Harshit Agrawal (Enrollment: 25125017)  
@@ -40,7 +40,7 @@ BlindFlight-Solution/
 ├── Notebooks/               # Jupyter notebooks for EDA, training, and analysis
 ├── Sample outputs/          # Visualizations of generated paths and debug images
 ├── Submissions/             # Generated CSV submission files (including Final & Backup)
-├── SubmissionScript/        # The core inference logic (submission_generator.py)
+├── SubmissionScript/        # The core inference logic (Generator.py.py)
 ├── .gitignore               
 └── README.md                # Project documentation
 
