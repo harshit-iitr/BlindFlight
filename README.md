@@ -3,9 +3,10 @@
 
 **Author:** Harshit Agrawal (Enrollment: 25125017)  
 **Branch:** Data Science & AI (IIT Roorkee)
+**Year:** 1st Year
 
 ## 🎯 The Mission
-Following an EMP blast, Stark Industries' logistics network is blind. [cite_start]This project rebuilds the perception and planning stack to navigate autonomous drones through **Labs, Forests, and Deserts** using only imagery[cite: 5, 7, 12].
+Following an EMP blast, Stark Industries' logistics network is blind. This project rebuilds the perception and planning stack to navigate autonomous drones through **Labs, Forests, and Deserts** using only imagery.
 ## 🧠 The Solution: Hybrid "Gap-Filling" Ensemble
 We achieved **81% accuracy** not by relying on a single model, but by engineering a **Two-Stage Perception Pipeline**. This approach mitigates the specific weaknesses of grid-based vision.
 
