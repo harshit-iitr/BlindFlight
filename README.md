@@ -25,10 +25,14 @@ We achieved **81% accuracy** not by relying on a single model, but by engineerin
 The final submission combines these two models. The Gridded model provides precise, optimal paths for the majority of maps. Wherever the Gridded model is uncertain or fails to find a valid route, the **Ungridded model fills the gap**, raising the overall system accuracy to **81.82%**.
 
 ## 📂 Repository Structure
+
 ```text
 BlindFlight-Solution/
-├── submission_generator.py   # The Universal Solver (Vision + A*)
-├── Final Model Gridded.pth   # Trained ResNet-18 Weights
-├── class_mapping (1).json    # Class label definitions
-├── assets/                   # Diagrams and helper images
-└── README.md                 # This file
+├── assets/                  # Diagrams, icons, and visual assets for documentation
+├── Models/                  # Trained Model weights (.pth)
+├── Notebooks/               # Jupyter notebooks for EDA, training, and analysis
+├── Sample outputs/          # Visualizations of generated paths and debug images
+├── Submissions/             # Generated CSV submission files (including Final & Backup)
+├── SubmissionScript/        # The core inference logic (submission_generator.py)
+├── .gitignore               
+└── README.md                # Project documentation
